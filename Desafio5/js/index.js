@@ -1,22 +1,18 @@
-let intentos = 3
-let username = "diana"
-let password = "abc"
+const productos = ["produc1","produc2","produc3","produc4"]
 
-function login() {
-    while (intentos > 0){
-        let inputUserName = prompt("Ingrese su nombre de usuario");
-        let inputPassword = prompt("Ingrese su sontraseña: ");
+console.log(`Stock: ${productos.length}`)
 
-        if(inputUserName == username && inputPassword == password){
-            alert("Inicio de sesion exitosa.")
-            break;
-        } else{
-            intentos--
-            //alert("Usuario o contraseña incorrectos. Intentos restantes:" + )
-        }
-    }
+for(let i = 0; i < productos.length; i ++){
+    console.log("producto en indice="+i+"= " +productos[i])
+}
 
-    if(intentos == 0){
-        alert("Se acabaron los intentos, intentar mas tarde")
-    }
+console.log("---------")
+let stock = productos.length
+for(let i = 0; i < stock; i++){
+    productos.pop()
+    console.log(`Nuevo stock despues de la compra: ${productos.length}`)
+    console.log("Productos disponibles: ")
+    for (let index = 0; index < productos.length; index++) {
+        console.log("Producto " + (index + 1)+":"+productos[index] );
+    } 
 }
