@@ -10,7 +10,3 @@ producto.categoria = "Smartwatch"
 
 delete producto.stock
 console.log(producto)
-
-nombre: "Reloj"
-precio: 16000
-categoria: "Smartwatch"
